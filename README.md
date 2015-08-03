@@ -44,7 +44,7 @@ $ bower install
 
 ## Releases
 
-[x] - v1.0.1 - Initial layout
+- [x] - v1.0.1 - Initial layout
 
 [Github releases](https://github.com/hiof/layout/releases)
 
@@ -52,4 +52,4 @@ $ bower install
 
 ### Roadmap
 
-[ ] - Make the layout project agnostic
+- [ ] - Make the layout project agnostic
