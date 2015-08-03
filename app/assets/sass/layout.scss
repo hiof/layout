@@ -1,0 +1,284 @@
+@import '../../../vendor/sass-mq/mq';
+@import '../../../vendor/frontend/app/assets/sass/variables/_standard.scss';
+// Universal
+*,
+*:before,
+*:after {
+    //-moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+//html.cover{
+//  #body{
+//    background: #fff;
+//    //margin-top: 60rem;
+//    float: left;
+//  }
+//}
+.lo-full,
+.lo-half,
+.lo-quarter,
+.lo-auron-1-3,
+.lo-auron-2-3,
+.lo-one-third,
+.lo-two-thirds {
+    float: left;
+    margin-bottom: 2rem;
+    padding: 0 2rem;
+}
+
+html,
+#body {
+    width: 100%;
+}
+
+html {
+    width: 100%;
+}
+
+#body {
+    //padding-top: 4rem;
+    min-height: 80rem;
+    overflow-x: hidden;
+}
+
+#main {
+    padding-top: 4rem;
+}
+
+#header,
+#main,
+#footer {
+    max-width: 104rem;
+    margin: 0 auto;
+    // IE11 fix since it lacks UA styling
+    display: block;
+}
+
+#content {
+    padding-left: 2rem;
+    min-height: 30rem;
+    > header {
+        position: relative;
+        min-height: 7rem;
+    }
+}
+
+//#content header + *{
+//
+//}
+#main footer header {
+    h2 {
+        padding-left: 2rem;
+    }
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+html.index {
+    .lo-full,
+    .lo-half,
+    .lo-auron-1-3,
+    .lo-auron-2-3 {
+        header {
+            h2 {
+                float: left;
+            }
+        }
+    }
+}
+
+header.lo-full {
+    padding-left: 0;
+}
+
+#content,
+#sidebar {
+    padding-top: 2rem;
+}
+
+@include mq($until: small) {
+    .lo-full,
+    .lo-half,
+    .lo-quarter,
+    .lo-auron-1-3,
+    .lo-auron-2-3,
+    .lo-one-third,
+    .lo-two-thirds {
+        width: 100%;
+    }
+    //html.cover{
+    //  #body{
+    //    margin-top: 0;
+    //  }
+    //  #content{
+    //    margin-top: 0;
+    //  }
+    //  .cover-inline{
+    //    background-image: none;
+    //    height: 0;
+    //  }
+    //}
+    #main {
+        padding-top: 6rem;
+    }
+    #people,
+    #calendar,
+    #research,
+    #news {
+        padding: 0 1rem;
+    }
+    #people {
+        .lo-full {
+            padding: 0;
+        }
+    }
+    #calendar {
+        .lo-half {
+            width: 50%;
+            padding: 0;
+        }
+    }
+    #research,
+    #news {
+        .lo-quarter {
+            padding: 0;
+        }
+    }
+}
+
+@include mq($from: small, $until: large) {
+    //.lo-cover();
+    .lo-full {
+        width: 100%;
+    }
+    .lo-half {
+        width: 50%;
+        //margin: 1%;
+        //float: left;
+        padding: 0 2rem;
+    }
+    .lo-one-third {
+        width: 100%;
+        //margin: 0 1%;
+        padding: 0 2rem;
+    }
+    .lo-two-thirds {
+        width: 100%;
+        //margin: 0 1%;
+        padding: 0 2rem;
+    }
+    .lo-quarter {
+        width: 50%;
+        //margin: 0 1%;
+        padding: 0 2rem;
+    }
+    .lo-auron-1-3 {
+        width: 100% * 0.382;
+        padding: 0 2rem;
+    }
+    .lo-auron-2-3 {
+        width: 100% * 0.618;
+        width: 100%;
+    }
+    #people,
+    #calendar,
+    #research,
+    #news {
+        padding: 0 1rem;
+    }
+    #people {
+        .lo-full {
+            padding: 0;
+        }
+    }
+    #calendar {
+        .lo-half {
+            width: 50%;
+            padding: 0;
+        }
+    }
+    #research,
+    #news {
+        //@ratio-16-9: (9%/16%*100%);
+        .lo-quarter {
+            padding: 0 .5rem;
+        }
+    }
+}
+
+@include mq($from: large) {
+    //.lo-cover();
+    .lo-full {
+        width: 100%;
+    }
+    .lo-half {
+        width: 50%;
+        //margin-left: 1%;
+        //margin-right: 1%;
+        padding: 0 2rem;
+    }
+    .lo-quarter {
+        width: 25%;
+        //margin: 0 1%;
+        padding: 0 2rem;
+    }
+    .lo-auron-1-3 {
+        width: 100% * 0.382;
+        padding: 0 2rem;
+    }
+    .lo-auron-2-3 {
+        width: 100% * 0.618;
+    }
+    .lo-one-third {
+        width: 31%;
+        margin-left: 1%;
+        margin-right: 1%;
+        padding: 0 2rem;
+    }
+    .lo-two-thirds {
+        width: 62%;
+        margin-left: 1%;
+        margin-right: 1%;
+        padding: 0 2rem;
+    }
+    .lo-first {
+        padding-left: 0;
+    }
+    .lo-last {
+        padding-right: 0;
+    }
+    .lo-auron-2-3 {
+        .lo-full {
+            //padding: 0;
+            //margin: 0;
+        }
+        .lo-half {
+            //&.lo-first{
+            //  padding-left: 0;
+            //  //padding-right: 2rem;
+            //}
+            //&.lo-last{
+            //  //padding-left: 2rem;
+            //  padding-right: 0;
+            //}
+        }
+        .lo-quarter {}
+        .lo-first {
+            padding-left: 0;
+        }
+        .lo-last {
+            padding-right: 0;
+        }
+    }
+    #people,
+    #calendar {
+        padding-top: 2rem;
+    }
+}
