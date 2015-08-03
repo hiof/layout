@@ -1,0 +1,13 @@
+{
+  "name": "layout",
+  "version": "1.0.0-beta.1",
+  "homepage": "https://github.com/hiof/layout",
+  "authors": [
+    "Kenneth Dahlstrøm <kenneth.dahlstrom@hiof.no>"
+  ],
+  "description": "layout plugin",
+  "license": "GNU",
+  "dependencies": {
+    "sass-mq": "~3.2.2"
+  }
+}
