@@ -2,7 +2,7 @@
 
 ## About
 
-A plugin with the required files for the Cover content functionality.
+A plugin-component for the layout stylesheet.
 
 ## Copyright
 
@@ -44,8 +44,12 @@ $ bower install
 
 ## Releases
 
+[x] - v1.0.1 - Initial layout
+
 [Github releases](https://github.com/hiof/layout/releases)
+
+
 
 ### Roadmap
 
-v1.0.0 - Initial layout
+[ ] - Make the layout project agnostic
