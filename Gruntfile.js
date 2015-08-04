@@ -250,6 +250,7 @@ module.exports = function(grunt) {
 
 
     grunt.registerTask('build', ['clean:build', 'clean:dist', 'subtaskCss', 'versioning:build']);
+    grunt.registerTask('dist', ['clean:build', 'clean:dist', 'subtaskCss', 'versioning:build', 'copy:dist']);
     grunt.registerTask('deploy', ['clean:build', 'clean:dist', 'subtaskCss', 'versioning:deploy', 'copy:dist']);
 
 
