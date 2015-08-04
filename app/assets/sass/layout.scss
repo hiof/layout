@@ -28,7 +28,8 @@
 }
 
 html,
-#body {
+#body,
+.body {
     width: 100%;
 }
 
@@ -36,26 +37,32 @@ html {
     width: 100%;
 }
 
-#body {
+#body,
+.body {
     //padding-top: 4rem;
     min-height: 80rem;
     overflow-x: hidden;
 }
 
-#main {
+#main,
+.main {
     padding-top: 4rem;
 }
 
 #header,
+.header,
 #main,
-#footer {
+.main,
+#footer,
+.footer {
     max-width: 104rem;
     margin: 0 auto;
     // IE11 fix since it lacks UA styling
     display: block;
 }
 
-#content {
+#content,
+.content {
     padding-left: 2rem;
     min-height: 30rem;
     > header {
@@ -67,12 +74,14 @@ html {
 //#content header + *{
 //
 //}
-#main footer header {
+#main,
+.main{
+  footer header {
     h2 {
         padding-left: 2rem;
     }
+  }
 }
-
 .float-left {
     float: left;
 }
@@ -99,7 +108,9 @@ header.lo-full {
 }
 
 #content,
-#sidebar {
+.content,
+#sidebar,
+.sidebar {
     padding-top: 2rem;
 }
 
@@ -125,7 +136,8 @@ header.lo-full {
     //    height: 0;
     //  }
     //}
-    #main {
+    #main,
+    .main {
         padding-top: 6rem;
     }
     #people,

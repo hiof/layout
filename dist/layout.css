@@ -15,34 +15,43 @@
   padding: 0 2rem; }
 
 html,
-#body {
+#body,
+.body {
   width: 100%; }
 
 html {
   width: 100%; }
 
-#body {
+#body,
+.body {
   min-height: 80rem;
   overflow-x: hidden; }
 
-#main {
+#main,
+.main {
   padding-top: 4rem; }
 
 #header,
+.header,
 #main,
-#footer {
+.main,
+#footer,
+.footer {
   max-width: 104rem;
   margin: 0 auto;
   display: block; }
 
-#content {
+#content,
+.content {
   padding-left: 2rem;
   min-height: 30rem; }
-  #content > header {
+  #content > header,
+  .content > header {
     position: relative;
     min-height: 7rem; }
 
-#main footer header h2 {
+#main footer header h2,
+.main footer header h2 {
   padding-left: 2rem; }
 
 .float-left {
@@ -61,7 +70,9 @@ header.lo-full {
   padding-left: 0; }
 
 #content,
-#sidebar {
+.content,
+#sidebar,
+.sidebar {
   padding-top: 2rem; }
 
 @media (max-width: 39.99em) {
@@ -73,7 +84,8 @@ header.lo-full {
   .lo-one-third,
   .lo-two-thirds {
     width: 100%; }
-  #main {
+  #main,
+  .main {
     padding-top: 6rem; }
   #people,
   #calendar,
