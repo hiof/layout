@@ -1,20 +1,99 @@
+/*
+
+## Component: Layout
+
+*/
+
+
+
 @import '../../../vendor/sass-mq/mq';
 @import '../../../vendor/frontend/app/assets/sass/variables/_standard.scss';
-// Universal
+
+
+/*
+
+### Box sizing
+
+Setup all elements with `box-sizing:border-box` (this includes the padding in the element width)
+
+```css
 *,
 *:before,
 *:after {
-    //-moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+```
+
+
+*/
+
+*,
+*:before,
+*:after {
     box-sizing: border-box;
 }
 
-//html.cover{
-//  #body{
-//    background: #fff;
-//    //margin-top: 60rem;
-//    float: left;
-//  }
-//}
+/*
+
+### Float/sizing for `.lo-` prefixed element
+
+```css
+@mixin floatAndStandardSpacing(){
+    float: left;
+    margin-bottom: 2rem;
+    padding: 0 2rem;
+}
+```
+
+
+*/
+@mixin floatAndStandardSpacing(){
+    float: left;
+    margin-bottom: 2rem;
+    padding: 0 2rem;
+}
+
+
+/*
+
+### Layout classes
+
+
+Sets the layout up using the `.lo-` prefix. The following options are available:
+
+
+- .lo-full{} (100% width of the parrent)
+- .lo-half{} (50% width of the parrent)
+- .lo-quarter{}  (25% width of the parrent)
+- .lo-auron-1-3{} (38.2% width of the parrent)
+- .lo-auron-2-3{} (61.8% width of the parrent)
+- .lo-one-third{} (33% width of parrent)
+- .lo-two-thirds{} (66% width of parrent)
+
+
+*/
+
+/*
+
+#### Examples:
+
+
+```
+<div class="c-bg-pink lo-full">Full width element</div>
+<div class="c-bg-pink lo-half">half width element</div>
+<div class="c-bg-purple lo-half">half width element</div>
+<div class="c-bg-aquablue lo-quarter">quarter width element</div>
+<div class="c-bg-pink lo-quarter">quarter width element</div>
+<div class="c-bg-purple lo-quarter">quarter width element</div>
+<div class="c-bg-pink lo-quarter">quarter width element</div>
+<div class="c-bg-aquablue lo-auron-1-3">lo-auron-1-3 width element</div>
+<div class="c-bg-seagreen lo-auron-2-3">lo-auron-2-3 width element</div>
+<div class="c-bg-purple lo-one-third">lo-one-third width element</div>
+<div class="c-bg-pink lo-two-thirds">lo-two-thirds width element</div>
+```
+
+*/
+
 .lo-full,
 .lo-half,
 .lo-quarter,
@@ -22,9 +101,7 @@
 .lo-auron-2-3,
 .lo-one-third,
 .lo-two-thirds {
-    float: left;
-    margin-bottom: 2rem;
-    padding: 0 2rem;
+    @include floatAndStandardSpacing;
 }
 
 html,
@@ -33,9 +110,9 @@ html,
     width: 100%;
 }
 
-html {
-    width: 100%;
-}
+//html {
+//    width: 100%;
+//}
 
 #body,
 .body {
@@ -71,9 +148,6 @@ html {
     }
 }
 
-//#content header + *{
-//
-//}
 #main,
 .main{
   footer header {
@@ -124,18 +198,6 @@ header.lo-full {
     .lo-two-thirds {
         width: 100%;
     }
-    //html.cover{
-    //  #body{
-    //    margin-top: 0;
-    //  }
-    //  #content{
-    //    margin-top: 0;
-    //  }
-    //  .cover-inline{
-    //    background-image: none;
-    //    height: 0;
-    //  }
-    //}
     #main,
     .main {
         padding-top: 6rem;
@@ -166,29 +228,23 @@ header.lo-full {
 }
 
 @include mq($from: small, $until: large) {
-    //.lo-cover();
     .lo-full {
         width: 100%;
     }
     .lo-half {
         width: 50%;
-        //margin: 1%;
-        //float: left;
         padding: 0 2rem;
     }
     .lo-one-third {
         width: 100%;
-        //margin: 0 1%;
         padding: 0 2rem;
     }
     .lo-two-thirds {
         width: 100%;
-        //margin: 0 1%;
         padding: 0 2rem;
     }
     .lo-quarter {
         width: 50%;
-        //margin: 0 1%;
         padding: 0 2rem;
     }
     .lo-auron-1-3 {
@@ -197,7 +253,7 @@ header.lo-full {
     }
     .lo-auron-2-3 {
         width: 100% * 0.618;
-        width: 100%;
+        //width: 100%;
     }
     #people,
     #calendar,
@@ -218,7 +274,6 @@ header.lo-full {
     }
     #research,
     #news {
-        //@ratio-16-9: (9%/16%*100%);
         .lo-quarter {
             padding: 0 .5rem;
         }
@@ -226,19 +281,16 @@ header.lo-full {
 }
 
 @include mq($from: large) {
-    //.lo-cover();
+
     .lo-full {
         width: 100%;
     }
     .lo-half {
         width: 50%;
-        //margin-left: 1%;
-        //margin-right: 1%;
         padding: 0 2rem;
     }
     .lo-quarter {
         width: 25%;
-        //margin: 0 1%;
         padding: 0 2rem;
     }
     .lo-auron-1-3 {
@@ -267,20 +319,6 @@ header.lo-full {
         padding-right: 0;
     }
     .lo-auron-2-3 {
-        .lo-full {
-            //padding: 0;
-            //margin: 0;
-        }
-        .lo-half {
-            //&.lo-first{
-            //  padding-left: 0;
-            //  //padding-right: 2rem;
-            //}
-            //&.lo-last{
-            //  //padding-left: 2rem;
-            //  padding-right: 0;
-            //}
-        }
         .lo-quarter {}
         .lo-first {
             padding-left: 0;
