@@ -1,8 +1,81 @@
+/*
+
+## Component: Layout
+
+*/
+/*
+
+### Box sizing
+
+Setup all elements with `box-sizing:border-box` (this includes the padding in the element width)
+
+```css
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+```
+
+
+*/
 *,
 *:before,
 *:after {
   box-sizing: border-box; }
 
+/*
+
+### Float/sizing for `.lo-` prefixed element
+
+```css
+@mixin floatAndStandardSpacing(){
+    float: left;
+    margin-bottom: 2rem;
+    padding: 0 2rem;
+}
+```
+
+
+*/
+/*
+
+### Layout classes
+
+
+Sets the layout up using the `.lo-` prefix. The following options are available:
+
+
+- .lo-full{} (100% width of the parrent)
+- .lo-half{} (50% width of the parrent)
+- .lo-quarter{}  (25% width of the parrent)
+- .lo-auron-1-3{} (38.2% width of the parrent)
+- .lo-auron-2-3{} (61.8% width of the parrent)
+- .lo-one-third{} (33% width of parrent)
+- .lo-two-thirds{} (66% width of parrent)
+
+
+*/
+/*
+
+#### Examples:
+
+
+```
+<div class="c-bg-pink lo-full">Full width element</div>
+<div class="c-bg-pink lo-half">half width element</div>
+<div class="c-bg-purple lo-half">half width element</div>
+<div class="c-bg-aquablue lo-quarter">quarter width element</div>
+<div class="c-bg-pink lo-quarter">quarter width element</div>
+<div class="c-bg-purple lo-quarter">quarter width element</div>
+<div class="c-bg-pink lo-quarter">quarter width element</div>
+<div class="c-bg-aquablue lo-auron-1-3">lo-auron-1-3 width element</div>
+<div class="c-bg-seagreen lo-auron-2-3">lo-auron-2-3 width element</div>
+<div class="c-bg-purple lo-one-third">lo-one-third width element</div>
+<div class="c-bg-pink lo-two-thirds">lo-two-thirds width element</div>
+```
+
+*/
 .lo-full,
 .lo-half,
 .lo-quarter,
@@ -17,9 +90,6 @@
 html,
 #body,
 .body {
-  width: 100%; }
-
-html {
   width: 100%; }
 
 #body,
@@ -47,8 +117,7 @@ html {
   min-height: 30rem; }
   #content > header,
   .content > header {
-    position: relative;
-    min-height: 7rem; }
+    position: relative; }
 
 #main footer header h2,
 .main footer header h2 {
@@ -120,8 +189,7 @@ header.lo-full {
     width: 38.2%;
     padding: 0 2rem; }
   .lo-auron-2-3 {
-    width: 61.8%;
-    width: 100%; }
+    width: 61.8%; }
   #people,
   #calendar,
   #research,
@@ -134,7 +202,7 @@ header.lo-full {
     padding: 0; }
   #research .lo-quarter,
   #news .lo-quarter {
-    padding: 0 0.5rem; } }
+    padding: 0 .5rem; } }
 
 @media (min-width: 56.25em) {
   .lo-full {
