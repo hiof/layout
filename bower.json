@@ -2,11 +2,11 @@
   "name": "layout",
   "homepage": "https://github.com/hiof/layout",
   "authors": [
-    "Kenneth Dahlstrøm <kenneth.dahlstrom@hiof.no>"
+    "Kenneth Lindbeck-Dahlstrøm <kld@hiof.no>"
   ],
   "description": "layout plugin",
   "license": "GNU",
-  "dependencies": {
+  "devDependencies": {
     "sass-mq": "~3.2.2",
     "frontend": "https://github.com/hiof/frontend.git"
   }
